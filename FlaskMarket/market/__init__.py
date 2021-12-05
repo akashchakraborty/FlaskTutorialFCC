@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)           # Initialize the instance of the flask with the given argument
 								# __name__ refers to the local python file I am working with
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///market.db'
+app.config['SECRET_KEY'] = '2c18235be4c572e07c1cc56e'
 db = SQLAlchemy(app)			# initializing the class
 
 from market import routes
